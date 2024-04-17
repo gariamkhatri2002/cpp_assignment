@@ -58,7 +58,7 @@ ANS:-
 #include <bits/stdc++.h>
 using namespace std;
 bool leap(int n){
-    if(n%100!=0 && n%4 || n%400){
+    if(n%100!=0 && n%4==0 || n%400==0){
         return true;
     }
     else{
@@ -1207,6 +1207,7 @@ int main(){
     cin>>cost;
     float totalamount,discount;
     totalamount=cost*quantity;
+
     cout<<"totalamount before the discount:"<<totalamount<<"\n";
         
     string res=book_dis(totalamount,discount,quantity,cost);

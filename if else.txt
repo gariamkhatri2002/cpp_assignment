@@ -502,24 +502,20 @@ int main()
 ANS:-
 #include<bits/stdc++.h>
 using namespace std;
-string currency(float dollar,float ind){
-    if(ind){
-        ind=ind*dollar;
-        return"convert";
-    }
-    return"ind";
+float currency(float amount){
+    float ans=(amount/83.62);
+    return ans;
 }
 int main(){
-    float dollar,ind;
-    cout<<"enter the dollar:";
-    cin>>dollar;
-    ind=(1/0.012);
-    string res=currency(dollar,ind);
-    if(res=="convert"){
-        cout<<"indian rupee is :"<<ind;
-    }
+    float amount;
+    cout<<"enter the indian currency:";
+    cin>>amount;
+    
+    float res=currency(amount);
+    cout<<res;
     return 0;
 }
+
  
 17. **Password Strength Checker:**
  Implement a program that evaluates the strength of a password based on certain criteria (length,  presence of uppercase letters, numbers, etc.) using `if-else` statements.
@@ -697,22 +693,16 @@ ANS:-
 #include <bits/stdc++.h>
 using namespace std;
 string character_categories(string ch){
-    if(ch=="q" ||ch=="w" ||ch=="e" ||ch=="r" ||ch=="t" ||ch=="y" ||ch=="u" ||ch=="i" ||ch=="o" ||ch=="p"){
-        return"uppercase letter";
+    if(ch>="A" && ch<="Z")
+    return "uppercase";
+    else if(ch>="a" && ch<="z"){
+        return "lower case";
     }
-    else if(ch=="z" ||ch=="x" ||ch=="c" ||ch=="v" ||ch=="b" ||ch=="n" ||ch=="m"){
-        return"lowercase letter";
+    else if(ch>="0" && ch<="9"){
+        return "digit";
     }
-    else if(ch=="0" ||ch=="1" ||ch=="2" ||ch=="3" ||ch=="4" ||ch=="5" ||ch=="6" ||ch=="7" ||ch=="8" ||ch=="9"){
-        return"digit";
-    }
-    else if(ch=="!" ||ch=="@" ||ch=="#" ||ch=="$" ||ch=="%" ||ch=="&" ||ch=="^" ||ch=="+" ||ch=="*" ||ch=="/" ||ch=="-" ){
-        return"special character";
-    }
-    else{
-        return"mismatch";
-    }
-    return"ch";
+    else
+    return "symbol";
 }
  
 int main() 
@@ -724,6 +714,8 @@ int main()
     
     return 0;
 } 
+
+   
 21. **Electricity Bill Calculator:** 
  Create a program that calculates the electricity bill based on the units consumed. Apply different  rates for different consumption ranges using `if-else` statements.
 

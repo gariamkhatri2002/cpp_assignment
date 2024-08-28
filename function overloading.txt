@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 1. Write a function that overloads the "print" function to print an integer, a float, and a string.
 
@@ -360,3 +361,367 @@ int main()
     cout << "The area of a irregular polygon In which n"
          << " : " << n << " s : " << s << " =  " << area(n, s);
 }
+=======
+
+1. Write a function that overloads the "print" function to print an integer, a float, and a string.
+
+#include<bits/stdc++.h>
+using namespace std;
+int print(int a){
+    return a;
+}
+float print(float b){
+    return b;
+}
+string print(string c){
+    return c;
+}
+int main(){
+    int a=56;
+    float b=33.5;
+    string c="garima";
+    cout<<print(a)<<"\n";
+    cout<<print(b)<<"\n";
+    cout<<print(c)<<"\n";
+    return 0;
+}
+   
+2. Implement a function that overloads the "sum" function to calculate the sum of two integers, two floats, and two doubles.
+   
+#include <bits/stdc++.h>
+using namespace std;
+int sum(int a, int b)
+{
+    return a + b;
+}
+float sum(float c, float d)
+{
+    return c + d;
+}
+double sum(double c, double d)
+{
+    return c + d;
+}
+int main()
+{
+    int a = 10, b = 20;
+    float c = 5.5, d = 6.5;
+
+    double e = 55.8999966, f = 65.56575665;
+
+    cout << sum(a, b) << "\n";
+    cout << sum(c, d) << "\n";
+    cout << setprecision(15) << sum(e, f);
+    return 0;
+}
+
+3. Write a function that overloads the "area" function to calculate the area of a circle when passed the radius as an argument and the area of a square when passed the side length as an argument.
+
+#include <bits/stdc++.h>
+using namespace std;
+float area(float r)
+{
+    return r * r * 3.14;
+}
+
+int area(int side)
+{
+    return side * side;
+}
+
+int main()
+{
+    float r = 2;
+    int side = 4;
+    cout << area(r) << "\n";
+    cout<<area(side)<<"\n";
+
+    return 0;
+}
+
+   
+4. Create a function that overloads the "volume" function to calculate the volume of a cube when passed the side length as an argument and the volume of a cylinder when passed the radius and height as arguments.
+   
+#include<bits/stdc++.h>
+using namespace std;
+int volume(int side){
+    return side*side*side;
+}
+float volume(float radius,float height){
+    return (22.0/7.0)*radius*radius*height;
+}
+int main(){
+    int side=3;
+    float radius=2.5;
+    float height=4.5;
+    cout<<"volume of cube:"<<volume(side)<<"\n";
+    cout<<"volume of cylinder:"<<volume(radius,height);
+    return 0;
+}
+
+5. Implement a function that overloads the "maximum" function to find the maximum of two integers, two floats, and two doubles.
+
+   #include<bits/stdc++.h>
+using namespace std;
+string maximum(int a,int b){
+    if(a>b)
+    return "a is greater";
+    else
+    return "b is greater";
+}
+string maximum(float c,float d){
+    if(c>d)
+    return "c is greater";
+    else
+    return "d is graeter";
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    float c,d;
+    cout<<"enter the value of c and d:";
+    cin>>c>>d;
+    cout<<maximum(a,b)<<"\n";
+    cout<<maximum(c,d)<<"\n";
+
+    return 0;
+}
+6. Write a function that overloads the "area" function to calculate the area of a rectangle when passed the length and width as arguments and the area of a triangle when passed the base and height as arguments.
+   
+#include<bits/stdc++.h>
+using namespace std;
+int area(int l,int b){
+    return l*b;
+}
+float area(float base,float h){
+    return (base*h)/2.0;
+}
+int main(){
+    int l,b;
+    cout<<"enter the value of l and b";
+    cin>>l>>b;
+    float base,h;
+    cout<<"enter the value of base and h";
+    cin>>base>>h;
+    cout<<"area of rectangle is"<<area(l,b)<<"\n";
+    cout<<"area of triangle is"<<area(base,h)<<"\n";
+
+    return 0;
+}
+
+7. Create a function that overloads the "volume" function to calculate the volume of a sphere when passed the radius as an argument and the volume of a cone when passed the radius and height as arguments.
+   
+#include<bits/stdc++.h>
+using namespace std;
+float volume(float radius){
+    return (4.0/3.0)*(22.0/7.0)*radius*radius*radius;
+}
+float volume(float radius,float height){
+    return (22.0/7.0)*radius*radius*(height/3.0);
+}
+int main(){
+    
+    float radius=2.5;
+    float height=4.5;
+    cout<<"volume of sphere:"<<volume(radius)<<"\n";
+    cout<<"volume of cone:"<<volume(radius,height);
+    return 0;
+}
+
+8. Write a function that overloads the "average" function to calculate the average of two integers, two floats, and two doubles.
+  
+#include<bits/stdc++.h>
+using namespace std;
+float average(int a,int b){
+    return (a+b)/2.0;
+}
+float average(float c,float d){
+    return (c+d)/2.0;
+}
+double average(double e,double f){
+    return (e+f)/2.0;
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    float c,d;
+    double e=5.4783,f=6.98726;
+    cout<<"enter the value of c and d:";
+    cin>>c>>d;
+    cout<<"average of int value is"<<average(a,b)<<"\n";
+    cout<<"average of float value is"<<average(c,d)<<"\n";
+    cout<<"average of double value is:"<<setprecision(15)<<average(e,f);
+
+
+    return 0;
+} 
+
+9. Implement a function that overloads the "area" function to calculate the area of a parallelogram when passed the base and height as arguments and the area of a trapezoid when passed the bases and height as arguments.
+  
+#include<bits/stdc++.h>
+using namespace std;
+int area(int base,int height){
+    return base*height;
+}
+float area(float a,float b,float h){
+    return ((a+b)*h)/2;
+}
+int main(){
+    int base=3;
+    int height=4;
+    float a=2.0;
+    float b=3.3;
+    float h=4.4;
+    cout<<area(base,height)<<"\n";
+    cout<<area(a,b,h);
+
+
+    return 0;
+}
+ 
+10. Create a function that overloads the "volume" function to calculate the volume of a cuboid when passed the length, width, and height as arguments and the volume of a rectangular prism when passed the length, width, and height as arguments.
+   
+#include<bits/stdc++.h>
+using namespace std;
+int volume(int l,int b,int h){
+    return l*b*h;
+}
+float volume(float L,float W,float H){
+    return L*W*H; 
+}
+int main(){
+    int l=2,b=4,h=6;
+    float L=2.0,W=3.2,H=2.5;
+    
+    cout<<"cuboid volume is:"<<volume(l,b,h)<<"\n";
+    cout<<"rectagular prism volume is:"<<volume(L,W,H);
+
+    return 0;
+}
+
+11. Write a function that overloads the "power" function to calculate the power of an integer and a float.
+   
+#include<bits/stdc++.h>
+using namespace std;
+int power(int a){
+    int res=0;
+    for(int i=1;i<=a;i++){
+        res=pow(a,i);
+
+    }
+    return res;
+}
+float power(float b){
+    float res=0;
+    for(float i=1;i<=b;i++){
+        res=pow(b,i);
+    }
+    return res;
+}
+
+int main(){
+    int a=5;
+    float b=2.0;
+    cout<<power(a)<<"\n";
+    cout<<power(b);
+
+    return 0;
+}
+
+12. Implement a function that overloads the "area" function to calculate the area of a rhombus when passed the diagonals as arguments and the area of a kite when passed the diagonals as arguments.
+  
+#include<bits/stdc++.h>
+using namespace std;
+float area(int p,int q){
+    return (p*q)/2.0;
+}
+float area(float P,float Q){
+    return (P*Q)/2.0;
+}
+int main(){
+    int p=7,q=5;
+    float P=9.5,Q=4.4;
+    cout<<"rhombus area is:"<<area(p,q)<<"\n";
+    cout<<"kite area is:"<<area(P,Q);
+    return 0;
+}
+ 
+13. Create a function that overloads the "factorial" function to calculate the factorial of an integer and a long integer.
+   
+#include<bits/stdc++.h>
+using namespace std;
+int factorial(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    return fact;
+
+}
+long int factorial(long int n){
+    int fact=1;
+    for(int i=1;i<=n;i++){
+        fact=fact*i;
+    }
+    return fact;
+}
+int main(){
+    int n=23;
+    cout<<factorial(n)<<"\n";
+    cout<<factorial(n);
+
+    return 0;
+}
+
+14. Write a function that overloads the "distance" function to calculate the distance between two points given their coordinates (x1, y1) and (x2, y2) as arguments and the distance between two points given their coordinates (x1, y1, z1) and (x2, y2, z2) as arguments.
+
+#include<bits/stdc++.h>
+using namespace std;
+float distance(int x1,int x2,int y1,int y2){
+    return sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+
+}
+float distance(int x1,int x2,int y1,int y2,int z1,int z2){
+    return sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
+}
+int main(){
+    int x1=2,x2=4;
+    int y1=3,y2=5;
+    int z1=4,z2=6;
+    cout<<"distance between two points"<<distance(x1,x2,y1,y2)<<"\n";
+    cout<<"distance between three points"<<distance(x1,x2,y1,y2,z1,z2);
+
+
+    return 0;
+}
+
+   
+15. Implement a function that overloads the "area" function to calculate the area of a regular polygon when passed the number of sides and the side length as arguments and the area of an irregular polygon when passed the number of sides and the lengths of each side as arguments.
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+int area(int a, int b, int c)
+{
+    int s;
+    s = (a + b + c) / 2;
+    return sqrt(s * (s - a) * (s - b) * (s - c));
+}
+double area(double n, double s)
+{
+    double pie = 3.14;
+    double areas = (n * s * s) / (4 * tan(pie / n));
+    return areas;
+}
+int main()
+{
+    int a = 5, b = 7, c = 9;
+    double n = 5, s = 10;
+    cout << "The area of a regular polygon In which a"
+         << " : " << a << " b : " << b << " c : " << c << " =  " << area(a, b, c) << endl;
+    cout << "The area of a irregular polygon In which n"
+         << " : " << n << " s : " << s << " =  " << area(n, s);
+}
+>>>>>>> a0c9119e4d767e81973d82773947b936c40f43e5

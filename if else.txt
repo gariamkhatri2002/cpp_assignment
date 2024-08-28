@@ -514,8 +514,14 @@ int main(){
     float res=currency(amount);
     cout<<res;
     return 0;
+<<<<<<< HEAD
 } 
 
+=======
+}
+
+ 
+>>>>>>> a0c9119e4d767e81973d82773947b936c40f43e5
 17. **Password Strength Checker:**
  Implement a program that evaluates the strength of a password based on certain criteria (length,  presence of uppercase letters, numbers, etc.) using `if-else` statements.
 
@@ -714,6 +720,10 @@ int main()
     return 0;
 } 
 
+<<<<<<< HEAD
+=======
+   
+>>>>>>> a0c9119e4d767e81973d82773947b936c40f43e5
 21. **Electricity Bill Calculator:** 
  Create a program that calculates the electricity bill based on the units consumed. Apply different  rates for different consumption ranges using `if-else` statements.
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. Write a program to print the first 10 even numbers.
 
  
@@ -790,3 +791,797 @@ int main(){
     
     return 0;
 }
+=======
+1. Write a program to print the first 10 even numbers.
+
+ 
+Ans-
+#include <bits/stdc++.h>
+using namespace std;
+void even(int n){
+    for(int i=1;i<=n;i++){
+        if(i%2==0){
+            cout<<" "<<i;
+        }
+    }
+}
+int main()
+{
+    
+    int n;
+    even(20);
+    
+
+    return 0;
+}
+2. Create a program to print the multiplication table of a given number.
+
+
+Ans-
+ #include<bits/stdc++.h>
+using namespace std;
+int table(int n,int res){
+    for(int i=1;i<=10;i++){
+        res=n*i;
+        cout<<" "<<res;
+    }
+    return res;
+}
+int main()
+{
+    int n;
+    cout<<"enter the number:";
+    cin>>n;
+    int res=0;
+   // cout<<table(n,res);
+    int ayush= table(n,res);
+   // cout<<ayush;
+    return 0;
+}
+3. Write a program to calculate the factorial of a given number.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int factorial(int n){
+    int fact=1;
+    for(int i=1;i<=n;i++)
+        fact*=i;
+    
+    return fact;
+}
+
+int main(){
+    
+    int n;
+    cout<<"enter the value of n:";
+    cin>>n;
+    int res=factorial(n);
+    cout<<res;
+    
+    return 0;
+}
+
+ 
+4. Create a program to find whether a given number is prime or not. 
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+
+
+bool prime(int n){
+    for(int i=2;i<n;i++){
+        if(n%i==0)
+        {
+            return false;
+        }
+     }
+      return true ;
+}
+
+int main()
+{
+    
+    int num;
+    cout<<"enter the value of num:";
+    cin>>num;
+    if(prime(num)){
+        cout<<num<<" is a prime number";
+    }
+    else{
+        cout<<num<<" is a not prime number";
+    }
+    
+   
+    return 0;
+}
+5. Write a program to find the sum of digits of a given number. 
+
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int summation(int num){
+    int sum,rem=0;
+    while(num>0){
+        rem=num%10;
+        sum=sum+rem;
+        num=num/10;
+    }
+    
+    return sum;
+}
+int main(){
+    int num;
+    cout<<"enter the number of num:";
+    cin>>num;
+    cout<<summation(num);
+    
+    return 0;
+}
+
+
+6. Create a program to print the Fibonacci series up to a certain limit.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int fibonacci(int num,int n3){
+    int n1=0,n2=1;
+    cout<<n1<<" "<<n2;
+    for(int i=1;i<=num;i++){
+        n3=n1+n2;
+        cout<<" "<<n3;
+        
+        n1=n2;
+        n2=n3;
+    }
+    return num;
+    
+    
+    
+}
+int main(){
+    int num;
+    cout<<"enter the number of num:";
+    cin>>num;
+    int n3;
+    //cout<<fibonacci(num);
+    int res=fibonacci(num,n3);
+    //cout<<res;
+    return 0;
+}
+
+7. Write a program to find the reverse of a given number. 
+
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int reverse(int num){
+    int sum,rem=0;
+    while(num>0){
+        rem=num%10;
+        sum=sum*10+rem;
+        num=num/10;
+    }
+    
+    return sum;
+}
+int main(){
+    int num;
+    cout<<"enter the number of num:";
+    cin>>num;
+    cout<<reverse(num);
+    
+    return 0;
+}
+
+
+8. Create a program to find the sum of all natural numbers up to a given limit.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int summation(int num){
+    int sum=0;
+    for(int i=1;i<=num;i++)
+    sum+=i;
+    
+    return sum;
+}
+int main(){
+    int num;
+    cout<<"enter the number of num:";
+    cin>>num;
+    cout<<summation(num);
+    
+    return 0;
+}
+
+ 
+9. Write a program to find the GCD (Greatest Common Divisor) of two given numbers.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+//gdc(greatest common divisor)
+int greatest_c_d(int a,int b){
+    int gcd=1;
+    for(int i=1;i<=a ||i<=b;i++){
+        if(a%i==0 && b%i==0){
+            gcd=i;
+        }
+        
+    }
+    return gcd;
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    cout<<greatest_c_d(a,b);
+    return 0;
+}
+
+ 10. Create a program to find the LCM (Least Common Multiple) of two given numbers.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+//gdc(greatest common divisor)
+int greatest_c_d(int a,int b){
+    int gcd=1;
+    for(int i=1;i<=a ||i<=b;i++){
+        if(a%i==0 && b%i==0){
+            gcd=i;
+        }
+        
+    }
+    return gcd;
+}
+
+//lcm(Least Common Multiple)
+int lcm(int a,int b){
+    return a*b/greatest_c_d(a,b);
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    cout<<lcm(a,b);
+    return 0;
+}
+
+ 11. Write a program to check whether a given number is Armstrong or not.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+bool armstrong(int num){
+    int sum,rem=0;
+    int temp=num;
+    while(num>0){
+        rem=num%10;
+        sum=sum+rem*rem*rem;
+        num=num/10;
+    }
+    cout<<"value of sum is:"<<sum<<"\n";
+    if(temp==sum){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+int main(){
+   int num;
+   cout<<"enter the value of num:";
+   cin>>num;
+   
+   if(armstrong(num)){
+       cout<<"this number is armstrong";
+   }
+   else{
+       cout<<"this number is not armstrong";
+   }
+    return 0;
+}
+
+ 
+12. Create a program to print all Armstrong numbers between two given numbers.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+void armstrong(int a,int b){
+    for(int i=a;i<=b;i++){
+        int num=i;
+        int sum=0,rem=0;
+        int temp=num;
+        while(num>0){
+            rem=num%10;
+            sum=sum+rem*rem*rem;
+            num=num/10;
+        }
+        if(temp==sum){
+            cout<<"armstrong number is:"<<temp<<" "<<"\n";
+        }
+    }
+}
+int main(){
+    int a,b;
+    cout<<"enter the starting and ending point:";
+    cin>>a>>b;
+    armstrong(a,b);
+    
+    return 0;
+}
+
+ 
+13. Write a program to check whether a given number is a palindrome or not.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+//pallindrome
+bool pallindrome(int num){
+    int sum,rem=0;
+    int temp=num;
+    while(num>0){
+        rem=num%10;
+        sum=sum*10+rem;
+        num=num/10;
+    }
+    cout<<"the value of sum is:"<<sum<<"\n";
+    if(temp==sum){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+int main(){
+    int num;
+    cout<<"enter the value of num:";
+    cin>>num;
+    if(pallindrome(num)){
+        cout<<"this number is pallindrome";
+    }
+    else{
+        cout<<"this number is not pallindrome";
+    }
+    return 0;
+} 
+14. Create a program to print all palindrome numbers between two given numbers. 
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+void pallindrome_no(int a,int b){
+    for(int i=a;i<=b;i++){
+        int num=i;
+        int sum=0;
+        int rem=0;
+        int temp=num;
+        while(num>0){
+            rem=num%10;
+            sum=sum*10+rem;
+            num=num/10;
+        }
+        if(temp==sum){
+            cout<<"pallindrome number is:"<<temp<<"\n";
+        }
+    }
+}
+int main(){
+    int a,b;
+    cout<<"enter the value of a and b:";
+    cin>>a>>b;
+    pallindrome_no(a,b);
+    return 0;
+}
+
+15. Write a program to count the number of digits in a given number.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int count_number(int num){
+    int count=0;
+    while(num>0){
+        count++;
+        num=num/10;
+    }
+    return count;
+}
+int main(){
+    int num;
+    cout<<"enter the value of num:";
+    cin>>num;
+    cout<<count_number(num);
+    return 0;
+} 
+16. Create a program to find the sum of all prime numbers between two given numbers.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+bool prime(int n){
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            return false;
+        }
+        
+    }
+    return true;
+}
+int main(){
+    int i,start,end,res;
+    cin>>start>>end;
+    res=0;
+    for(int i=start;i<=end;i++){
+        if(prime(i)==true){
+            res=res+i;
+            cout<<i<<"\n";
+        }
+    }
+    cout<<"the sum of prime number is:"<<res;
+    return 0;
+}
+
+17. Create a program to print all prime numbers up to a given limit.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+void prime(int a,int b){
+    for(int i=a;i<=b;i++){
+        int a=i;
+        int flag=0;
+        for(int j=2;j<a;j++){
+            if(a%j==0){
+                flag=1;
+            }
+        }
+        if(flag==0){
+            cout<<i<<" ";
+        }
+        
+    }
+}
+
+int main(){
+    
+    int a,b;
+    cout<<"enter the starting and ending point:";
+    cin>>a>>b;
+    prime(a,b);
+    
+    
+    return 0;
+} 
+18. Write a program to find the factorial of each digit of a given number and add them.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+
+int factorial(int n)
+{
+    int fact=1;
+    for(int i=1;i<=n;i++)
+        fact*=i;
+    return fact;
+}
+int summation(int n)
+{
+    int sum=0;
+    for(int i=1;i<=n;i++)
+    {
+      sum += factorial(n);
+    }
+    return sum;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of n:\n";
+    cin>>n;
+    int ans = summation(n);
+    cout<<ans;
+}
+
+19. Write a program to print the first N terms of the series: 1, 4, 9, 16, 25, ...
+
+Ans-
+ #include<bits/stdc++.h>
+using namespace std;
+void nterm_series(int a,int b){
+    
+    for(int j=a;j<=b;j++){
+        a=j;
+    
+    int res=0;
+    for(int i=a;i<=a;i++){
+        res=i*i;
+    }
+    cout<<res<<" ";
+    }   
+}
+int main(){
+    int a,b;
+    cout<<"entr the value of a and b:";
+    cin>>a>>b;
+    nterm_series(a,b);
+    
+    return 0;
+}
+
+20. Create a program to find the sum of squares of all even numbers between two given numbers.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+bool even(int n){
+    if(n%2==0)
+    return true;
+    else
+    return false;
+}
+
+int main(){
+    int i,start,end,res;
+    cout<<"enter the starting and ending point:";
+    cin>>start>>end;
+    int tu=0;
+    res=0;
+    for(int i=start;i<=end;i++){
+        
+        if(even(i)){
+            
+            cout<<"even number is:"<<i<<"\n";
+            res=pow(i,2);
+            cout<<"the square of even number is:"<<res<<"\n";
+            tu=tu+res;
+            
+        }
+        
+    }
+    cout<<tu;
+    
+    
+    
+    // int total=0;
+    // for(int j=1;j<=res;j++)
+    // {
+    //     total+=j;
+    // }
+    // cout<<total;
+
+    return 0;
+}
+ 21. Write a program to find the factorial of a given number using recursion.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int fact(int n){
+    if(n<=0)
+    return 1;
+    return n*fact(n-1);
+    
+}
+int main(){
+    int s=fact(5);
+    cout<<s;
+    return 0;
+} 
+22. Create a program to generate a pattern like a right-angled triangle using '*' character.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+void pattern(int n,int h){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=h;j++){
+            if(i==5 ||j==1 ||i==j){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<"\n";
+    }
+    
+}
+
+int main(){
+    
+    int n,h;
+    cout<<"enter the value of n:\n";
+    cout<<"enter the value of h:";
+    cin>>n>>h;
+    pattern(n,h);
+    return 0;
+} 
+
+23. Write a program to calculate the sum of the series: 1 + 1/2 + 1/3 + 1/4 + ... + 1/N.
+
+Ans-
+ #include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"enter the value of n:";
+    cin>>n;
+    float sum=0;
+    for(int i=1;i<=n;i++){
+        float d=1.0/i;
+        sum=sum+d;
+    }
+    cout<<sum;
+    return 0;
+}
+
+
+ 
+24. Write a program to check whether a given number is a perfect number or not.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+string perfect_no(int n){
+    int sum=0;
+    for(int i=1;i<=n/2;i++){
+        if(n%i==0){
+            sum+=i;
+        }
+    }
+    cout<<sum;
+    if(sum==n)
+    return "perfect number";
+    else
+    return"not perfect number";
+    
+}
+int main(){
+    int n;
+    cout<<"enter the value of n:";
+    cin>>n;
+    cout<<perfect_no(n);
+    
+    return 0;
+}
+
+25. Create a program to find the area of a circle given its radius.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+float area_circle(int n){
+    float area=0;
+    area=(n*n)*3.14;
+    return area;
+}
+int main(){
+   
+    int radius;
+    cout<<"enter the radius:";
+    cin>>radius;
+    cout<<"the area is:"<<area_circle(radius);
+    
+    return 0;
+}
+ 
+26. Write a program to check whether a given year is a leap year or not.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+bool year_check(int n){
+    if(n%4==0 && n%400==0 || n%100!=0)
+       return true;
+    else
+       return false;
+}
+int main(){
+   int n;
+   cout<<"enter the year:";
+   cin>>n;
+   if(year_check(n)){
+       cout<<"leap year";
+   }
+   else{
+       cout<<"not leap year";
+   }
+    
+    
+    return 0;
+} 
+
+27. Create a program to find the sum of the series: 1 + x^2/2! + x^3/3! + ... + x^n/n!.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+int fact(int n){
+   if(n<=0){
+       return 1;
+       
+   }
+   return n*fact(n-1);
+    
+}
+int main(){
+    int x;
+    cout<<"enter the value of x:";
+    cin>>x;
+    float sum=1;
+    for(int i=2;i<=x;i++){
+        sum+=((pow(x,i)/fact(i)));
+    }
+    cout<<sum;
+    return 0;
+}
+
+28. Write a program to find the sum of the series: 1/1! - 2/2! + 3/3! - 4/4! + ... + N/N!.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+float fact(int n){
+    if(n<=0)
+    return 1;
+    return n*fact(n-1);
+    
+    
+}
+
+int main(){
+    int n;
+    cout<<"enter the value of n:";
+    cin>>n;
+    float res=0;
+    float ans=0;
+    for(int i=1.0;i<=n;i++){
+        if(i%2==0){
+            res+=i/fact(i);
+        }
+        else{
+            ans+=i/fact(i);
+        }
+    }
+    float total=ans-res;
+    cout<<total;
+    return 0;
+}
+ 
+
+29. Create a program to calculate the area of a triangle given its three sides using Heron's formula.
+
+Ans-
+#include<bits/stdc++.h>
+using namespace std;
+float heron(float a,float b,float c){
+    float s=(a+b+c)/2.0;
+    cout<<"the value of s:"<<s<<"\n";
+    float area=0;
+    area=sqrt(s*(s-a)*(s-b)*(s-c));
+    return area;
+}
+int main(){
+    float a,b,c;
+    cout<<"enter the value of a,b,c:";
+    cin>>a>>b>>c;
+    cout<<heron(a,b,c);
+    
+    
+    return 0;
+}
+>>>>>>> a0c9119e4d767e81973d82773947b936c40f43e5
